@@ -1,0 +1,7 @@
+# P0-5 classification (plan §6.1). Not yet consumed by anything.
+schema_version: 1
+tasks:
+  lint:      { argv: [npm, run, lint],      platform: any, reuse: { allowed: true, max_age: 72h } }
+  typecheck: { argv: [npm, run, typecheck], platform: any, reuse: { allowed: true, max_age: 72h } }
+  test:      { argv: [npm, run, test],      platform: any, reuse: { allowed: true, max_age: 72h } }  # pure JS + jsdom; owner's explicit claim
+  build:     { argv: [npm, run, build],     platform: any, reuse: { allowed: true, max_age: 72h } }
